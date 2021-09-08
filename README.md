@@ -41,7 +41,7 @@ Ik wil de website van Hello Fresh gebruiken: https://www.hellofresh.nl
 #### Screenshot(s) van de eerste pagina (small screen): 
 Hello Fresh start pagina:
 
-<img src="images/hf-beginscherm.png" width="375px" alt="omschrijving van de pagina">
+<img src="images/hf-beginscherm.PNG" width="375px" alt="omschrijving van de pagina">
 
 #### Screenshot(s) van de tweede pagina (small screen):
 Hello Fresh weekemenu:
