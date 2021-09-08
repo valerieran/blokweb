@@ -45,7 +45,7 @@ Hello Fresh start pagina:
 
 #### Screenshot(s) van de tweede pagina (small screen):
 Hello Fresh weekemenu:
-<img src="images/hf-weekmenu.png" width="375px" alt="omschrijving van de pagina">
+<img src="images/hf-weekmenu.PNG" width="375px" alt="omschrijving van de pagina">
  
 </details>
 
@@ -59,7 +59,7 @@ Hello Fresh weekemenu:
 <summary>uitwerken na afloop 2e werkgroep</summary>
 
 ### de hele pagina: 
-<img src="images/hf-volledig.pdf" width="375px" alt="breakdown van de hele pagina">
+<img src="images/hf-volledig-1.png" width="375px" alt="breakdown van de hele pagina">
 
 ### dynamisch deel (bijv menu): 
 <img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
