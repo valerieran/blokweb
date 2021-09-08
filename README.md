@@ -63,10 +63,11 @@ Ik wil de website van Hello Fresh gebruiken: https://www.hellofresh.nl
 <img src="images/hf-volledig-1.png" width="375px" alt="breakdown van de hele pagina">
 
 ### dynamisch deel (bijv menu): 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+<img src="images/dynamisch.png" width="375px" alt="breakdown van een dynamisch deel">
 
 ### wellicht nog een dynamisch deel (bijv filter): 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+<p> Op het beginscherm staat een zin waarin het laatste woord na enkele seconde veranderd. Dit is te doen met Java Script. </p>
+<img src="images/dynamisch2.png" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 
