@@ -33,7 +33,7 @@ Surface plane
 ## Je website
 
 <details open>
-<summary>Hello Fresh</summary>
+<summary>uitwerken voor kick-off werkgroep</summary>
 
 ### Je opdracht:
 Ik wil de website van Hello Fresh gebruiken: https://www.hellofresh.nl
