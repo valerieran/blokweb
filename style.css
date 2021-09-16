@@ -1,0 +1,143 @@
+body{
+    margin: 0%;
+    font-family: "Source Sans Pro", "Trebuchet MS", Helvetica, sans-serif;
+
+}
+
+header{
+    position: relative;
+}
+
+header img:first-of-type {
+    position: absolute;
+    margin-left: 1em;
+    margin-top: 1em; 
+    display: block;
+    height: 22px;
+    width: 22px;
+       
+}
+
+header img:last-of-type {
+    margin-right: 200px;
+    margin-left: 140px;
+    margin-top: 1em;
+    height: 30px;
+    width: 90px;
+     
+}
+
+main img:nth-of-type(1){
+    position: relative;
+    margin-top: 15px;
+    height: 400px;
+    width: 100%;
+      
+}
+
+main img:nth-of-type(2) {
+    position: relative;
+    margin-right: auto;
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-top: 2em;
+    display: block;
+    width: 80%;
+    
+}
+
+main img:nth-of-type(3) {
+    position: relative;
+    margin-right: auto;
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-top: 2em;
+    display: block;
+    width: 80%;
+    
+}
+
+main img:nth-of-type(4) {
+    position: relative;
+    margin-right: auto;
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-top: 2em;
+    display: block;
+    width: 80%;
+    
+}
+
+main img:nth-of-type(5) {
+    position: relative;
+    margin-right: auto;
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-top: 2em;
+    display: block;
+    width: 80%;
+
+}
+
+main img:nth-of-type(6) {
+    position: relative;
+    margin-right: auto;
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-top: 2em;
+    display: block;
+    width: 100%;
+    height: 300px;
+
+}
+
+button:nth-of-type(1){
+    font-family: Agrandir, Verdana, Geneva, sans-serif;
+    background-color: rgb(42, 119, 42);
+    transform: translate(-50%, -50%);
+    border-radius: .4em;
+    position: absolute;
+    font-size: 15px;
+    color: white;
+    height: 48px;
+    width: 162px;
+    border: 0em;
+    left: 50%;
+    top: 41%; 
+    
+}
+
+button:nth-of-type(2){
+    font-family: Agrandir, Verdana, Geneva, sans-serif;
+    background-color: rgb(42, 119, 42);
+    transform: translate(-50%, -50%);
+    border-radius: .4em;
+    position: absolute;
+    font-size: 15px;
+    color: white;
+    height: 48px;
+    width: 162px;
+    border: 0em;
+    left: 50%;
+    top: 41%; 
+    
+}
+h1, h2{
+   font-family: Agrandir, Verdana, Geneva, sans-serif;
+   font-weight: lighter;
+   font-size: 1.75em;
+   text-align: center;
+   color: #242424;
+   
+   
+   
+}
+
+p{
+    text-align: center;
+    color: #676767;
+    margin: .1em;
+    
+   
+
+}

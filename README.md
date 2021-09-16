@@ -81,7 +81,10 @@ Ik wil de website van Hello Fresh gebruiken: https://www.hellofresh.nl
 <summary>uitwerken voor 1e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Het ging beter en sneller dan ik van te voren had gedacht. Ik ben alleen wat te laat begonnen met mijn website waardoor ik nog niet zo heel ver ben, maar ik heb er wel vertrouwen in! Ik heb het langst gedaan over de button die in het plaatjes moest komen. Dit wilde maar niet lukken dus ik moest weer even research doen naar de opdrachten uit de les en uiteindelijk is het gelukt! 
+
+
+
 
 
 ### Agenda voor meeting
@@ -236,8 +239,15 @@ hier screenshot(s) van je eindresultaat
 
 Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-1. bron 1
-2. bron 2
-3. ...
+ <ul>
+                <li> <a href="http://www.stickpng.com/img/icons-logos-emojis/menu-icons/hamburger-menu-icon">Menu icoon</a> </li>
+                <li>  <a href="https://www.hellofresh.nl/">Hello Fresh logo</a> </li> 
+                <li> <a href="https://img.hellofresh.com/c_fill,f_auto,fl_lossy,h_410,q_auto,w_380/hellofresh_website/gb/cms/homepage/HF_App_web_landing_page_newbanners_desktop_767x410.jpg">Header</a> </li>   
+                <li> <a href="https://img.hellofresh.com/f_auto,fl_lossy,q_auto,w_820/hellofresh_website/be/cms/homepage/image_columns/hiw-1-v2.png"> Eerste foto</a>  </li> 
+                <li> <a href="https://img.hellofresh.com/f_auto,fl_lossy,q_auto,w_820/hellofresh_website/be/cms/homepage/image_columns/hiw-2-v2.png"> Tweede foto </a> </li>
+                <li> <a href="https://img.hellofresh.com/f_auto,fl_lossy,q_auto,w_820/hellofresh_website/be/cms/homepage/image_columns/hiw-3-v2.png"> Derde foto </a> </li>
+                <li> <a href="https://img.hellofresh.com/f_auto,fl_lossy,q_auto,w_820/hellofresh_website/be/cms/homepage/image_columns/hiw-4-v3.png"> Vierde foto </a> </li>
+                <li> <a href="https://img.hellofresh.com/f_auto,fl_lossy,q_auto,w_660/hellofresh_website/be/cms/homepage/main_section/desktop_goodforyou-v2.png"> VijfdeZesde foto</a> </li>
+            </ul>
 
 </details>
