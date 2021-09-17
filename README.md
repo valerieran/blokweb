@@ -60,7 +60,9 @@ Ik wil de website van Hello Fresh gebruiken: https://www.hellofresh.nl
 <summary>uitwerken na afloop 2e werkgroep</summary>
 
 ### de hele pagina: 
-<img src="images/hf-volledig-1.png" width="375px" alt="breakdown van de hele pagina">
+<img src="images/hf-beginscherm-bds.png" width="375px" alt="">
+
+<img src="images/hf-weekmenu-bds.png" width="375px" alt="">
 
 ### dynamisch deel (bijv menu): 
 <img src="images/dynamisch.png" width="375px" alt="breakdown van een dynamisch deel">
