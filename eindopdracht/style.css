@@ -1,0 +1,266 @@
+body{
+    margin: 0%;
+    font-family: "Source Sans Pro", "Trebuchet MS", Helvetica, sans-serif;
+
+}
+
+header{
+    position: relative;
+}
+
+header img:first-of-type {
+    position: absolute;
+    margin-left: 1.5em;
+    margin-top: 1em; 
+    display: block;
+    height: 22px;
+    width: 22px;
+       
+}
+
+header img:last-of-type {
+    margin-right: 200px;
+    margin-left: 140px;
+    margin-top: 1em;
+    height: 30px;
+    width: 90px;
+     
+}
+
+
+
+/* Hero section */
+main section.uitgelicht { 
+    position: relative;
+    margin-top: 15px;
+}
+
+main section.uitgelicht img {
+    height: auto;
+    width: 100%;
+ 
+      
+}
+
+section.uitgelicht h1{
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 2em;
+    width: 50%;
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    
+}
+
+section.uitgelicht a { 
+    font-family: Agrandir, Verdana, Geneva, sans-serif;
+    background-color: rgb(42, 119, 42);
+    transform: translate(-50%, -50%);
+    border-radius: .4em;
+    position: absolute;
+    font-size: 1em;
+    color: white;
+    left: 50%;
+    top: 69%; 
+    text-decoration: none;
+    padding: 10px 15px;
+    
+} 
+
+section.uitgelicht p:nth-of-type(1){
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 2em;
+    width: 50%;
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 1px black;
+    font-style: italic;
+    
+}
+
+section.uitgelicht p:nth-of-type(2){
+    position: absolute;
+    text-align: center;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: .85em;
+    width: 60%;
+    height: 1.5em;
+    color: #5c5b5b;
+    
+}
+
+@keyframes hero-usp {
+    0% {
+        transform:none;
+    }
+    28% {
+        transform: translateX(70vw);
+    }
+    30% {
+        transform: translate(70vw);
+        opacity: 0;
+    }
+    70% {
+            transform: translate(-70vw);
+            opacity: 0;
+    }
+    72% {
+            transform: translateX(-70vw);
+    }
+    100% {
+            transform: none;
+    }
+
+}
+
+
+section.uitgelicht p span{
+    position: absolute;
+    animation-name: hero-usp;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+section.uitgelicht p span:nth-of-type(1){
+    animation-delay: 0s ;
+
+}
+
+section.uitgelicht p span:nth-of-type(2){
+    animation-delay: -2s ;
+}
+
+section.uitgelicht p span:nth-of-type(3) {
+    animation-delay: -4s ;
+}
+
+
+
+main img:nth-of-type(1) {
+    position: relative;
+    margin-right: auto;
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-top: 2em;
+    display: block;
+    width: 80%;
+    
+}
+
+main img:nth-of-type(2) {
+    position: relative;
+    margin-right: auto;
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-top: 2em;
+    display: block;
+    width: 80%;
+    
+}
+
+main img:nth-of-type(3) {
+    position: relative;
+    margin-right: auto;
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-top: 2em;
+    display: block;
+    width: 80%;
+    
+}
+
+main img:nth-of-type(4) {
+    position: relative;
+    margin-right: auto;
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-top: 2em;
+    display: block;
+    width: 100%;
+    height: 320px;
+
+}
+
+
+
+
+
+section.zowerkthet a {
+    font-family: Agrandir, Verdana, Geneva, sans-serif;
+    background-color: white ;
+    border:  1px solid rgb(42, 119, 42);
+    border-radius: .4em;
+    font-size: 15px;
+    color:rgb(42, 119, 42);
+    margin-top: 2em;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    padding: 12px 18px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    
+}
+h1, h2{
+    font-family: Agrandir, Verdana, Geneva, sans-serif;
+    font-weight: lighter;
+    font-size: 1.75em;
+    text-align: center;
+    color: #242424;
+   
+   
+   
+}
+
+section.zowerkthet p{
+    text-align: center;
+    color: #676767;
+    margin: .1em;
+    
+}
+
+section.goedVoorJouw h1, h2, h3 {
+    font-family: Agrandir, Verdana, Geneva, sans-serif;
+    font-weight: lighter;
+    font-size: 1em;
+    text-align: center;
+    color: #242424;
+}
+
+section.goedVoorJouw p{
+    text-align: center;
+    color: #000000;
+    margin-bottom: 3em;
+    margin-left: 2em;
+    margin-right: 2em;
+    font-size: .9em;
+    line-height: 1.7em;
+    
+    
+}
+
+
+
+
+
+section.footer ul{
+    background-color: rgb(42, 119, 42);
+    color: white;
+    list-style: none;
+    
+}
+
+section.footer a{
+    text-decoration: none;
+    color: white;
+    
+}
