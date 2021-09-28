@@ -1,3 +1,13 @@
+:root{
+    --h-color: #242424; 
+    --p-color: #676767;
+
+    --green-button-color: rgb(42, 119, 42);
+    --white-button-color: white;
+    
+    --font-family: Agrandir, Verdana, Geneva, sans-serif;
+}
+
 body{
     margin: 0%;
     font-family: "Source Sans Pro", "Trebuchet MS", Helvetica, sans-serif;
@@ -6,33 +16,293 @@ body{
 
 header{
     position: relative;
+    padding-top: .8em;
 }
 
-header img:first-of-type {
-    position: absolute;
-    margin-left: 1em;
-    margin-top: 1em; 
-    display: block;
-    height: 22px;
-    width: 22px;
-       
-}
-
-header img:last-of-type {
-    margin-right: 200px;
-    margin-left: 140px;
-    margin-top: 1em;
+/* img direct in de header (niet in list) */
+header > img{
+    
+    margin-left: 50%;
+    transform: translateX(-50%);
     height: 30px;
-    width: 90px;
+    width: auto;
+    
      
 }
 
-main img:nth-of-type(1){
+
+
+/************/
+/* HET MENU */
+/************/
+nav {
+    position: absolute;
+  }
+  
+  /***************/
+  /* menu button */
+  nav button {
+    
+    width:5em;
+    height:2.5em;
+    appearance:none;
+    border:none;
+    background-color: var(--white-button-color);
+   
+    
+    /* jouw code hier */
+    position:relative;
+    
+  }
+  
+  nav button img{
+    height: 20px;
+    width: auto;
+    /* align-items: center; */
+    /* button wordt klikbaar, foto niet. */
+    pointer-events: none;
+  }
+
+
+  /*******************/
+  /* lijst met links */
+  nav ul { 
+    margin:0; 
+    padding:1em 0 0;
+    background: white;
+    list-style:none;
+    
+    /* jouw code hier */
+    position:fixed;
+    left:0; top:0; bottom:0;
+    transform:translatex(-100%);
+    
+    transition:.5s;
+    
+    z-index:50;
+  }
+  
+  nav.toonMenu ul {
+    
+    transform:translatex(0);
+  }
+  
+  /************************/
+  /* een link in de lijst */
+  nav li {
+    margin:0; padding:0;
+    line-height: 2em;
+    margin-right: 3em;
+    
+  }
+
+  nav a {
+    display:flex;
+    gap:.25em;
+    padding:.25em 1em;
+    border-top:solid 1px var(--menu-border-color);
+    text-decoration: none;
+    color: black;
+  }
+
+nav ul li:first-child{
+    font-family: var(--font-family);
+    background-color: var(--white-button-color);
+    border:  1px solid var(--green-button-color);
+    border-radius: .4em;
+    font-size: 15px;
+    color: var(--green-button-color);
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 50%;
+    margin-bottom: 3em;
+    transform: translateX(-50%);
+    width: 90%;
+    
+}
+  
+  
+  nav a.active {
+    font-weight:bold;
+  }
+
+
+   header > div{
+       /* 30% doorzichtig */
+       background-color: rgba(0,0,0,0.3);
+       position: fixed;
+       left: 0; 
+       top: 0;
+       right: 0;
+       bottom: 0;
+       /* achter het menu over scherm */
+      z-index: 49;
+      visibility: hidden;
+      opacity: 0;
+      transition: .3s;
+
+
+
+}
+
+header > div.toonMenu{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+  
+
+
+
+
+
+
+
+  
+
+/* Hero section */
+main section.uitgelicht { 
     position: relative;
-    margin-top: 15px;
-    height: 400px;
+  
+}
+
+main section.uitgelicht img {
+    height: auto;
     width: 100%;
+    margin-top: .5em;
+    /* weten waarom 67 er staat!!  */
+    box-shadow:0em -.15em .15em  #00000067;
+ 
       
+}
+
+section.uitgelicht h1{
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 2em;
+    width: 50%;
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    
+}
+
+section.uitgelicht a { 
+    font-family: var(--font-family);
+    background-color: var(--green-button-color);
+    transform: translate(-50%, -50%);
+    border-radius: .4em;
+    position: absolute;
+    font-size: 1em;
+    color: white;
+    left: 50%;
+    top: 69%; 
+    text-decoration: none;
+    padding: 10px 15px;
+    
+} 
+
+section.uitgelicht a:hover{
+    cursor: pointer;
+    background-color: var(--white-button-color);
+    color: var(--green-button-color) ;
+}
+
+section.uitgelicht a:focus{
+    background-color: var(--white-button-color);
+    color: var(--green-button-color);
+    border:  1px solid var(--green-button-color);
+}
+
+section.uitgelicht p:nth-of-type(1){
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 2em;
+    width: 50%;
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 1px black;
+    font-style: italic;
+    
+}
+
+section.uitgelicht p:nth-of-type(2){
+    position: absolute;
+    text-align: center;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: .85em;
+    width: 60%;
+    height: 1.5em;
+    color: #5c5b5b;
+    
+}
+
+@keyframes hero-usp {
+    0% {
+        transform:none;
+    }
+    28% {
+        transform: translateX(70vw);
+    }
+    30% {
+        transform: translate(70vw);
+        opacity: 0;
+    }
+    70% {
+            transform: translate(-70vw);
+            opacity: 0;
+    }
+    72% {
+            transform: translateX(-70vw);
+    }
+    100% {
+            transform: none;
+    }
+
+}
+
+
+section.uitgelicht p span{
+    position: absolute;
+    animation-name: hero-usp;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+section.uitgelicht p span:nth-of-type(1){
+    animation-delay: 0s ;
+
+}
+
+section.uitgelicht p span:nth-of-type(2){
+    animation-delay: -2s ;
+}
+
+section.uitgelicht p span:nth-of-type(3) {
+    animation-delay: -4s ;
+}
+
+
+
+main img:nth-of-type(1) {
+    position: relative;
+    margin-right: auto;
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-top: 2em;
+    display: block;
+    width: 80%;
+    
 }
 
 main img:nth-of-type(2) {
@@ -75,69 +345,82 @@ main img:nth-of-type(5) {
     margin-left: auto;
     margin-top: 2em;
     display: block;
-    width: 80%;
-
-}
-
-main img:nth-of-type(6) {
-    position: relative;
-    margin-right: auto;
-    margin-bottom: 2em;
-    margin-left: auto;
-    margin-top: 2em;
-    display: block;
     width: 100%;
-    height: 300px;
+    height: 320px;
 
 }
 
-button:nth-of-type(1){
-    font-family: Agrandir, Verdana, Geneva, sans-serif;
-    background-color: rgb(42, 119, 42);
-    transform: translate(-50%, -50%);
-    border-radius: .4em;
-    position: absolute;
-    font-size: 15px;
-    color: white;
-    height: 48px;
-    width: 162px;
-    border: 0em;
-    left: 50%;
-    top: 41%; 
-    
-}
 
-button:nth-of-type(2){
-    font-family: Agrandir, Verdana, Geneva, sans-serif;
-    background-color: rgb(42, 119, 42);
-    transform: translate(-50%, -50%);
+
+
+
+section.zowerkthet a {
+    font-family: var(--font-family);
+    background-color: var(--white-button-color);
+    border:  1px solid var(--green-button-color);
     border-radius: .4em;
-    position: absolute;
     font-size: 15px;
-    color: white;
-    height: 48px;
-    width: 162px;
-    border: 0em;
-    left: 50%;
-    top: 41%; 
+    color:rgb(42, 119, 42);
+    margin-top: 2em;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    padding: 12px 18px;
+    margin-left: 50%;
+    transform: translateX(-50%);
     
 }
 h1, h2{
-   font-family: Agrandir, Verdana, Geneva, sans-serif;
-   font-weight: lighter;
-   font-size: 1.75em;
-   text-align: center;
-   color: #242424;
+    font-family: var(--font-family);
+    font-weight: lighter;
+    font-size: 1.75em;
+    text-align: center;
+    color: var(--h-color)
    
    
    
 }
 
-p{
+section.zowerkthet p{
     text-align: center;
-    color: #676767;
+    color: var(--p-color);
     margin: .1em;
     
-   
+}
 
+section.goedVoorJouw h1, h2, h3 {
+    font-family: var(--font-family);
+    font-weight: lighter;
+    font-size: 1em;
+    text-align: center;
+    color: #242424;
+}
+
+section.goedVoorJouw p{
+    text-align: center;
+    color: #000000;
+    margin-bottom: 3em;
+    margin-left: 2em;
+    margin-right: 2em;
+    font-size: .9em;
+    line-height: 1.7em;
+    
+    
+}
+
+
+
+
+
+section.footer ul{
+    background-color: rgb(42, 119, 42);
+    color: white;
+    list-style: none;
+    
+}
+
+section.footer a{
+    text-decoration: none;
+    color: white;
+    
 }

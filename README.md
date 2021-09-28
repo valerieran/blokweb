@@ -92,20 +92,19 @@ Het ging beter en sneller dan ik van te voren had gedacht. Ik ben alleen wat te 
 ### Agenda voor meeting
 samen met je groepje opstellen
 
-| student 1      | student 2          | student 3    | student 4        |
+| Roos           | Mina               | Ik           | student 4        |
 | ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
+| Centreren      | Schaalprobleem     | Centreren    | en dan ik dat    |
+| Schaalprobleem | dit als er tijd is | De footer    | dit wil ik zeker |
 | ...            | ...                | ...          | ...              |
 
 
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- Centreren is nu een stuk duidelijker!
+- Schaalprobleem hebben we het niet over gehad, hier had ik zelf geen probleem mee dus het maakt voor mij niet uit.
+
 
 </details>
 
@@ -119,26 +118,25 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 <summary>uitwerken voor 2e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Ik heb gewerkt aan mijn hamburger menu maar dit wil absoluut niet lukken helaas. Ik hoop hier in de gesprekken verder mee te komen.
 
 
 ### Agenda voor meeting
 samen met je groepje opstellen
 
-| student 1      | student 2          | student 3    | student 4        |
-| ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
+| Roos              | Mina           | Ik           | student 4        |
+| ---               | ---            | ---          | ---              |
+| Hamburger m.      | Hamburger m.   | Hamburger m. | en dan ik dat    |
+|                   | Carousel       | Bronnen      |                  |
+| ...               | ...            | ...          | ...              |
 
 
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- Opdracht over het hamburger menu hebben we gezamelijk opnieuw gedaan.
+- Draai carousel is ook uitgelegd. 
+
 
 </details>
 
