@@ -31,11 +31,16 @@ header {
 }
 
 /* img direct in de header (niet in list) */
-header > img {
+header > a {
     transform: translateX(-50%);
+    display: inline-block;
     margin-left: 50%;
-    height: 30px;
-    width: auto;  
+    height: auto;
+    width: 110px;
+}
+
+header > a img{
+    width: 100%;
 }
 
 
@@ -260,6 +265,8 @@ section.uitgelicht p:nth-of-type(2) {
     top: 44%;   
 }
 
+/* zorgt ervoor de het element in en uit beeld verschijnt
+de transform van links naar rechts */
 @keyframes hero-usp {
     0% {
         transform:none;
@@ -285,12 +292,15 @@ section.uitgelicht p:nth-of-type(2) {
 
 
 section.uitgelicht p span {
+    /* eindeloos doorgaan */
     animation-iteration-count: infinite;
     animation-name: hero-usp;
+    /* duurt 6 seconde */
     animation-duration: 6s;
     position: absolute;
 }
 
+/* zorgt ervoor dat de woorden niet gelijk in beeld komen maar na elkaar */
 section.uitgelicht p span:nth-of-type(1) {
     animation-delay: 0s ;
 }
@@ -482,6 +492,7 @@ section.carrousel h2 {
 section.carrousel { 
     background-image: url("../img/background-carrousel.png");
     background-color:rgb(230, 230, 230);
+    /* img gaat over hele section */
     background-size: cover;
     position: relative;   
     padding: 4em 0;
@@ -713,15 +724,19 @@ section.footer li:nth-of-type(4) {
     border-bottom: .05em solid var(--hr-color);
 }
 
-section.footer a {
+section.footer li a {
     color: var(--black-color);
     text-decoration: none;
-    margin-left: 2em;   
+    margin-left: 2em;  
+    display: flex; 
+}
+
+section.footer span{
+    flex-grow: 1;
 }
 
 section.footer li img {
     margin-top: .5em;
-    float: right;  
     height: 2em;
     width: auto;
 }
@@ -770,7 +785,6 @@ section.links img {
 /************************/
 
 section.helpHoofdFoto img {
-    /* weten waarom 67 er staat!!  */
     box-shadow:0em -.15em .15em  #00000067;
     position: relative;
     margin-top: .5em;
@@ -788,7 +802,7 @@ section.helpHoofdFoto h1 {
     display: flex;
     width: 50%;
     left: 50%;
-    top: 20%;  
+    top: 18%;  
 }
 
 section.helpHoofdFoto p {
