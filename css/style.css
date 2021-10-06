@@ -1,274 +1,263 @@
-:root{
-    --h-color: #242424; 
-    --p-color: #676767;
+:root {
+    /* kleuren */
+    --black-color: #000000; 
+    --grey-color: #676767;
 
-    --green-button-color: #067A46;
-    --white-button-color: white;
+    --dark-green-color: #067A46;
+    --green-color: #A5D947;
+    --hover-green-color: #E8F8C5;
+
+    --white-color: white;
+    --hr-color:  rgb(221, 221, 221);
+    --helpPagina-background-color: #f8f8f8; 
     
-    --font-family: Agrandir, Verdana, Geneva, sans-serif;
+    /* fonts */
+    --font-family-1: "Source Sans Pro", "Trebuchet MS", Helvetica, sans-serif;
+    --font-family-2: Agrandir, Verdana, Geneva, sans-serif;
 }
 
-body{
+body {
+    font-family: var(--font-family-1);
     margin: 0%;
-    font-family: "Source Sans Pro", "Trebuchet MS", Helvetica, sans-serif;
+}
+
+main {
     overflow-x: hidden;
 }
 
-header{
+header {
     position: relative;
     padding-top: .8em;
 }
 
 /* img direct in de header (niet in list) */
-header > img{
-    
-    margin-left: 50%;
+header > img {
     transform: translateX(-50%);
+    margin-left: 50%;
     height: 30px;
-    width: auto;
-    
-     
+    width: auto;  
 }
 
 
+/************/
+/* HET MENU - NIET UITGEKLAPT*/
+/************/
 
-/************/
-/* HET MENU */
-/************/
 nav {
     position: absolute;
-  }
+}
   
-  /***************/
-  /* menu button */
-  nav button {
-    
-    width:5em;
-    height:2.5em;
+nav button {  
+    background-color: var(--white-color);  
+    position:relative; 
     appearance:none;
+    height:2.5em;
     border:none;
-    background-color: var(--white-button-color);
-    position:relative;
-    
-  }
+    width:5em;    
+}
   
-  nav button img{
-    height: 20px;
-    width: auto;
+nav button img {
     /* button wordt klikbaar, foto niet. */
     pointer-events: none;
-  }
+    height: 20px;
+    width: auto;
+}
 
 
-  /*******************/
-  /* lijst met links */
-  nav ul { 
-    margin:0; 
-    padding:1em 0 0;
-    background: white;
-    list-style:none;
-    position:fixed;
-    left:0; top:0; bottom:0;
-    transition:.5s;
-    z-index:50;
-    line-height: 1.5em;
+/************/
+/* HET MENU -  UITGEKLAPBAAR*/
+/************/
+
+nav ul { 
+    background: var(--white-color);
     transform: translate(-100%);
-  }
+    line-height: 1.5em;
+    list-style: none;
+    width: calc(50%);
+    position: fixed;
+    transition: .5s;
+    /* achter het menu dus over het scherm heen 
+    (zo kan je bepalen welk element voor en welke achter moet komen */
+    z-index: 50;
+    padding: 0;
+    margin: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;   
+}
   
-  nav.toonMenu ul {
-    transform:translatex(0);
-  }
-  
-  /************************/
-  /* een link in de lijst */
-  nav li {
-    margin:0; padding:0;
-    line-height: 2em;
-    margin-right: 3em; 
-  }
+nav ul li {
+    padding: 1em;
+}
 
-  nav a {
-    display:flex;
-    gap:.25em;
-    padding:.25em 1em;
-    border-top:solid 1px var(--menu-border-color);
+nav ul li a {
+    color: var(--black-color);
     text-decoration: none;
-    color: black;
-  }
+    display: flex;
+    gap: .25em;
+}
 
-  /* nav a:hover:nth-child(1){
-    background-color: #E8F8C5;
-    color: var(--green-button-color);
-    width: 90%;
-} */
+nav ul li:hover:nth-child(1) {
+    background-color: var(--hover-green-color);
+    color: var(--dark-green-color);
+}
 
-  nav a:hover{
-      background-color: #E8F8C5;
-      color: var(--green-button-color);
-      width: 111%;
-  }
+nav ul li:hover {
+    background-color: var(--hover-green-color);
+    color: var(--dark-green-color);
+}
 
-nav ul li:first-child{
-    font-family: var(--font-family);
-    background-color: var(--white-button-color);
-    border:  1px solid var(--green-button-color);
+nav ul li:first-child {
+    font-family: var(--font-family2);
+    background-color: var(--white-color);
+    border: 1px solid var(--dark-green-color);
+    color: var(--dark-green-color);
+    /* calc zorgt er hier voor dat de breedte 100% wordt genomen maar dat 
+    er aan beide kanten 1em af wordt getrokken. (hier door de apdding vd container) */
+    width: calc(100% - 2em);
+    text-decoration: none;
     border-radius: .4em;
-    font-size: 15px;
-    color: var(--green-button-color);
     text-align: center;
-    display: inline-block;
-    text-decoration: none;
-    text-align: center;
-    margin-left: 50%;
     margin-bottom: 3em;
-    transform: translateX(-50%);
-    width: 90%;
-    
+    padding: 0.5em 0;
+    margin: 1em auto;
+    font-size: 15px;  
 }
-  
-nav ul li:first-of-type a{
-    color: var(--green-button-color);
-    flex-direction: row;
+
+nav ul li:first-of-type a {
+    color: var(--dark-green-color);
     justify-content: center;
+    flex-direction: row;
 }
 
-nav ul li:first-of-type a:hover{
-    background-color: #E8F8C5;
-    color: var(--green-button-color);
-    border-radius: .4em;
+nav ul li a svg {
+    padding-right: 0.25em;
 }
   
-
-
-   header > div{
-       /* 30% doorzichtig */
-       background-color: rgba(0,0,0,0.3);
-       position: fixed;
-       left: 0; 
-       top: 0;
-       right: 0;
-       bottom: 0;
-       /* achter het menu dus over het scherm heen */
-      z-index: 49;
-      visibility: hidden;
-      opacity: 0;
-      transition: .3s;
-
-
-
+nav hr{
+    color: var(--hr-color);
+    height: .02em;
 }
 
-header > div.toonMenu{
+nav.toonMenu ul {
+    transform:translatex(0);
+}
+
+/* div direct in de header, staat niet in een andere tag */
+header > div {
+     /* A bepaalt in hoeverre de ondergrond door een afbeelding (of iets)
+    heen zal schijnen, hoe kleiner het getal hoe hoger de transparantie (pixel).*/
+    background-color: rgba(0, 0, 0, 0.3);
+    visibility: hidden;
+    position: fixed;
+    transition: .3s;
+    /* achter het menu dus over het scherm heen 
+    (zo kan je bepalen welk element voor en welke achter moet komen */
+    z-index: 49;
+    opacity: 0;
+    bottom: 0;
+    right: 0;
+    left: 0; 
+    top: 0;  
+}
+
+header > div.toonMenu {
     visibility: visible;
     opacity: 1;
 }
 
 
-  
+/************************/
+/* Uitgelicht */
+/************************/
 
-
-
-
-
-
-
-  
-
-/* Hero section */
 main section.uitgelicht { 
     position: relative;
-    overflow-x: hidden;
 }
 
 main section.uitgelicht img:first-child {
-    height: auto;
-    width: 100%;
-    margin-top: .5em;
-    /* weten waarom 67 er staat!!  */
     box-shadow:0em -.15em .15em  #00000067;
- 
-      
+    margin-top: .5em;
+    height: auto;
+    width: 100%;     
 }
 
 main section.uitgelicht img:last-child {
-    position: absolute;
-    top: 80%;
-    left: 50%;
     transform: translateX(-50%);
+    justify-content: center;
+    position: absolute;
+    display: flex;
     width: auto;
     height: 4em;
-    display: flex;
-    justify-content: center;
+    left: 50%;
+    top: 80%; 
 }
 
-section.uitgelicht h1{
-    font-family: var(--font-family);
+section.uitgelicht h1 {
+    font-family: var(--font-family-2);
+    transform: translate(-50%);
+    justify-content: center; 
     font-weight: lighter;
     position: absolute;
-    top: 7%;
-    left: 50%;
-    transform: translate(-50%);
     font-size: 2em;
-    width: 50%;
     height: 1.5em;
     display: flex;
-    justify-content: center;
-    
+    width: 50%;
+    left: 50%;
+    top: 7%;   
 }
 
 section.uitgelicht a { 
-    font-family: var(--font-family);
-    background-color: var(--green-button-color);
+    background-color: var(--dark-green-color);
+    font-family: var(--font-family-2);
     transform: translate(-50%, -50%);
+    color: var(--white-color);
+    text-decoration: none;
     border-radius: .4em;
     position: absolute;
+    padding: 10px 15px; 
     font-size: 1em;
-    color: white;
     left: 50%;
     top: 69%; 
-    text-decoration: none;
-    padding: 10px 15px;
-    
 } 
 
-section.uitgelicht a:hover{
-    cursor: pointer;
-    background-color: var(--white-button-color);
-    color: var(--green-button-color) ;
+section.uitgelicht a:hover {
+    border:  1px solid var(--dark-green-color);
+    background-color: var(--white-color);
+    color: var(--dark-green-color);
+    cursor: pointer;   
 }
 
-section.uitgelicht a:focus{
-    background-color: var(--white-button-color);
-    color: var(--green-button-color);
-    border:  1px solid var(--green-button-color);
+section.uitgelicht a:focus {
+    border:  1px solid var(--dark-green-color);
+    background-color: var(--white-color);
+    color: var(--dark-green-color);
 }
 
-section.uitgelicht p:nth-of-type(1){
-    position: absolute;
-    top: 22%;
-    left: 50%;
+section.uitgelicht p:nth-of-type(1) {
+    border-bottom: solid 1px var(--black-color);
     transform: translate(-50%);
-    font-size: 2em;
-    width: 50%;
+    justify-content: center;
+    position: absolute;
+    font-style: italic; 
+    font-size: 2em; 
     height: 1.5em;
     display: flex;
-    justify-content: center;
-    border-bottom: solid 1px black;
-    font-style: italic;
-    
+    width: 50%;
+    left: 50%;
+    top: 22%;     
 }
 
-section.uitgelicht p:nth-of-type(2){
+section.uitgelicht p:nth-of-type(2) {
+    transform: translate(-50%);
+    color: var(--grey-color);
     position: absolute;
     text-align: center;
-    top: 44%;
-    left: 50%;
-    transform: translate(-50%);
     font-size: .85em;
-    width: 60%;
     height: 1.5em;
-    color: #5c5b5b;
-    
+    width: 60%;
+    left: 50%;
+    top: 44%;   
 }
 
 @keyframes hero-usp {
@@ -292,23 +281,21 @@ section.uitgelicht p:nth-of-type(2){
     100% {
             transform: none;
     }
-
 }
 
 
-section.uitgelicht p span{
-    position: absolute;
+section.uitgelicht p span {
+    animation-iteration-count: infinite;
     animation-name: hero-usp;
     animation-duration: 6s;
-    animation-iteration-count: infinite;
+    position: absolute;
 }
 
-section.uitgelicht p span:nth-of-type(1){
+section.uitgelicht p span:nth-of-type(1) {
     animation-delay: 0s ;
-
 }
 
-section.uitgelicht p span:nth-of-type(2){
+section.uitgelicht p span:nth-of-type(2) {
     animation-delay: -2s ;
 }
 
@@ -317,6 +304,9 @@ section.uitgelicht p span:nth-of-type(3) {
 }
 
 
+/************************/
+/* Zo werkt het */
+/************************/
 
 .zowerkthet img:nth-of-type(1) {
     position: relative;
@@ -326,7 +316,6 @@ section.uitgelicht p span:nth-of-type(3) {
     margin-top: 2em;
     display: block;
     width: 80%;
-    
 }
 
 .zowerkthet img:nth-of-type(2) {
@@ -336,8 +325,7 @@ section.uitgelicht p span:nth-of-type(3) {
     margin-left: auto;
     margin-top: 2em;
     display: block;
-    width: 80%;
-    
+    width: 80%;    
 }
 
 .zowerkthet img:nth-of-type(3) {
@@ -347,8 +335,7 @@ section.uitgelicht p span:nth-of-type(3) {
     margin-left: auto;
     margin-top: 2em;
     display: block;
-    width: 80%;
-    
+    width: 80%;   
 }
 
 .zowerkthet img:nth-of-type(4) {
@@ -358,8 +345,7 @@ section.uitgelicht p span:nth-of-type(3) {
     margin-left: auto;
     margin-top: 2em;
     display: block;
-    width: 80%;
-    
+    width: 80%;  
 }
 
 .zowerkthet img:nth-of-type(5) {
@@ -369,483 +355,662 @@ section.uitgelicht p span:nth-of-type(3) {
     margin-left: auto;
     margin-top: 2em;
     display: block;
-    width: 100%;
     height: 320px;
-
+    width: 100%;  
 }
 
-
-
-
-
 section.zowerkthet a {
-    font-family: var(--font-family);
-    background-color: var(--white-button-color);
-    border:  1px solid var(--green-button-color);
-    border-radius: .4em;
-    font-size: 15px;
+    border:  1px solid var(--dark-green-color);
+    background-color: var(--white-color);
+    font-family: var(--font-family-2);
+    transform: translateX(-50%);
     color:rgb(42, 119, 42);
-    margin-top: 2em;
     display: inline-block;
     text-decoration: none;
+    border-radius: .4em;
     text-align: center;
     padding: 12px 18px;
     margin-left: 50%;
-    transform: translateX(-50%);
-    
+    font-size: 15px;
+    margin-top: 2em;   
 }
 
-section.zowerkthet a:hover{
+section.zowerkthet a:hover {
+    background-color: var(--dark-green-color);
+    color: var(--white-color);
     cursor: pointer;
-    background-color: var(--green-button-color) ;
-    color: var(--white-button-color) ;
 }
 
-section.zowerkthet a:focus{
-    background-color: var(--white-button-color);
-    color: var(--green-button-color);
-    border:  1px solid var(--green-button-color);
+section.zowerkthet a:focus {
+    border:  1px solid var(--dark-green-color);
+    background-color: var(--white-color);
+    color: var(--dark-green-color);
 }
 
-h2{
-    font-family: var(--font-family);
+section.zowerkthet h2 {
+    font-family: var(--font-family-2);
+    color: var(--black-color);
     font-weight: lighter;
+    text-align: center;
     font-size: 1.75em;
-    text-align: center;
-    color: var(--h-color)
- 
 }
 
-h3{
-    font-family: var(--font-family);
+section.zowerkthet h3 {
+    font-family: var(--font-family-2);
+    color: var(--black-color); 
     font-weight: lighter;
-    font-size: 1.4em;
     text-align: center;
-    color: var(--h-color); 
-    
+    font-size: 1.4em;
 }
 
-section.zowerkthet p{
+section.zowerkthet p {
+    color: var(--grey-color);
     text-align: center;
-    color: var(--p-color);
-    margin: .1em;
-    
+    margin: .1em;  
 }
+
+
+/************************/
+/* Goed Voor Jouw */
+/************************/
 
 section.goedVoorJouw {
     background-color: #fbfbfd;
     padding: 2em 1em;
 }
 
-section.goedVoorJouw h2{
-    text-align: center;
-    color: #000000;
+section.goedVoorJouw h2 {
+    color: var(--black-color);
     margin-bottom: 2em;
-    margin-left: 2em;
-    margin-right: 2em;
-    font-size: 1em;
-    line-height: 1em;
-}
-
-
-section.goedVoorJouw p{
     text-align: center;
-    color: #000000;
-    margin-bottom: 3em;
-    font-size: .9em;
-    line-height: 1.7em;
-    
-    
+    margin-right: 2em;
+    margin-left: 2em;
+    line-height: 1em;
+    font-size: 1em;
 }
 
-section.goedVoorJouw a{
-    font-family: var(--font-family);
-    background-color: var(--green-button-color);
-    border-radius: .4em;
-    font-size: 15px;
-    color: var(--white-button-color);
-    margin-top: 2em;
+section.goedVoorJouw p {
+    color: var(--black-color);
+    text-align: center;
+    margin-bottom: 3em;
+    line-height: 1.7em;  
+    font-size: .9em;
+}
+
+section.goedVoorJouw a {
+    background-color: var(--dark-green-color);
+    font-family: var(--font-family-2);
+    transform: translateX(-50%);
+    color: var(--white-color);
     display: inline-block;
     text-decoration: none;
+    border-radius: .4em;
     text-align: center;
     padding: 12px 18px;
     margin-left: 50%;
-    transform: translateX(-50%);
+    font-size: 15px;
+    margin-top: 2em;  
+}
+
+section.goedVoorJouw a:hover {
+    border:  1px solid var(--dark-green-color);
+    background-color: var(--white-color);
+    color: var(--dark-green-color);
+    cursor: pointer;   
+}
+
+section.goedVoorJouw a:focus {
+    border:  1px solid var(--dark-green-color);
+    background-color: var(--white-color);
+    color: var(--dark-green-color);
 }
 
 
+/************************/
+/* Carrousel */
+/************************/
 
-/* carrousel */
-
-section.carrousel h2{
-    font-family: var(--font-family);
+section.carrousel h2 {
+    font-family: var(--font-family-2);
     font-weight: 100;
     font-size: 1.5em;
     text-align: center;
     color: #242424;
     margin-top: 0;
-   
-
 }
 
-section.carrousel{
-	background-color:rgb(230, 230, 230);
-    padding: 4em 0;
+section.carrousel { 
     background-image: url("../img/background-carrousel.png");
+    background-color:rgb(230, 230, 230);
     background-size: cover;
-    position: relative;
-    
+    position: relative;   
+    padding: 4em 0;
 }
 
-section.carrousel p{
-    text-align: center;
-    color: #000000;
+section.carrousel p {
+    color: var(--black-color);
     margin-bottom: 1em;
-    margin-left: 2em;
+    line-height: 1.7em; 
+    text-align: center;
     margin-right: 2em;
-    font-size: .9em;
-    line-height: 1.7em;
-    
+    margin-left: 2em;
+    font-size: .9em;  
 }
 
-section.carrousel ul{
-    list-style-type: none;
-    overflow-x: scroll;
-    margin:0;
-    padding:0;
-    width: 100%;
-    white-space: nowrap;
+section.carrousel ul {
     box-sizing: border-box;
+    list-style-type: none;
+    white-space: nowrap;
+    overflow-x: scroll;
+    width: 100%;
+    padding:0;
+    margin:0;  
 }
 
-section.carrousel ul li{
-display: inline-flex;
-width: 70vw;
-margin: 0;
-margin-left: .75em;
-padding: 0;
+section.carrousel ul li {
+    display: inline-flex;
+    margin-left: .75em;
+    width: 70vw;
+    padding: 0;
+    margin: 0; 
 }
 
-section.carrousel ul li img{
-    margin: 0;
+section.carrousel ul li img {
     width: 90%;
-    
-    }
+    margin: 0; 
+}
 
-section.carrousel a{
-    font-family: var(--font-family);
-    background-color: var(--green-button-color);
+section.carrousel a {
+    background-color: var(--dark-green-color);
+    font-family: var(--font-family-2);
     transform: translate(-50%, -50%);
+    color: var(--white-color);
+    text-decoration: none;
     border-radius: .4em;
     position: absolute;
+    padding: 10px 15px; 
     font-size: 1em;
-    color: white;
-    left: 50%;
     top: 95.5%; 
-    text-decoration: none;
-    padding: 10px 15px;
-    
+    left: 50%;   
 } 
 
-section.carrousel a:hover{
+section.carrousel a:hover {
+    border:  1px solid var(--dark-green-color);
+    background-color: var(--white-color);
+    color: var(--dark-green-color);
     cursor: pointer;
-    background-color: var(--white-button-color);
-    color: var(--green-button-color) ;
 }
 
-section.carrousel a:focus{
-    background-color: var(--white-button-color);
-    color: var(--green-button-color);
-    border:  1px solid var(--green-button-color);
+section.carrousel a:focus {
+    border:  1px solid var(--dark-green-color);
+    background-color: var(--white-color);
+    color: var(--dark-green-color);
 }
 
 
-/* beoordeling */
+/************************/
+/* Beoordeling */
+/************************/
 
-section.beoordeling{
+section.beoordeling {
     padding: 4em 0;
-    
-
 }
 
-section.beoordeling h2{
-    font-family: var(--font-family);
+section.beoordeling h2 {
+    font-family: var(--font-family-2);
+    text-align: center;
     font-weight: 100;
     font-size: 1.3em;
-    text-align: center;
     color: #242424;
     margin-top: 0;
 }
 
-section.beoordeling p{
+section.beoordeling p {
+    color: var(--black-color);
     text-align: center;
-    color: #000000;
     margin-bottom: 1em;
-    margin-left: 1em;
-    margin-right: 1em;
-    font-size: .9em;
     line-height: 1.7em;
+    margin-right: 1em;
+    margin-left: 1em;
+    font-size: .9em;
 }
 
 section.beoordeling img:nth-of-type(1) {
+    transform: translateX(-50%);
+    margin-left: 50%;
     height: 60px;
     width: auto;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    
 }
+
 section.beoordeling img:nth-of-type(2) {
+    transform: translateX(-50%);
+    margin-bottom: 2em;  
+    margin-left: 50%;
     width: 120px;
     height: auto;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    margin-bottom: 2em;
-    
 }
 
 section.beoordeling img:nth-of-type(3) {
-    height: 60px;
-    width: auto;
-    margin-left: 50%;
     transform: translateX(-50%);
+    margin-left: 50%;
+    height: 60px;
+    width: auto; 
 }
 
-section.beoordeling img:nth-of-type(4){
-        width: 120px;
-        height: auto;
-        margin-left: 50%;
-        transform: translateX(-50%);
-        margin-bottom: 2em;
+section.beoordeling img:nth-of-type(4) {
+    transform: translateX(-50%);
+    margin-bottom: 2em;
+    margin-left: 50%;
+    width: 120px;
+    height: auto;
 }
 
 
-/* Aan de slag */
+/************************/
+/* Aan De Slag */
+/************************/
 
-section.aanDeSlag h2{
-    font-family: var(--font-family);
-    font-weight: 100;
-    font-size: 1.7em;
+section.aanDeSlag h2 {
+    font-family: var(--font-family-2);
     text-align: center;
     color: #242424;
+    font-weight: 100;
+    font-size: 1.7em;
     margin-top: 0;
 }
 
-section.aanDeSlag p{
-    text-align: center;
-    color: #000000;
-    margin-bottom: 1em;
-    margin-left: 3em;
-    margin-right: 3em;
-    font-size: .9em;
+section.aanDeSlag p {
+    color: var(--black-color);
     line-height: 1.7em;
+    text-align: center;
+    margin-bottom: 1em;
+    margin-right: 3em;
+    margin-left: 3em;
+    font-size: .9em;
+    
 }
 
 section.aanDeSlag a:nth-of-type(1) {
-
-    font-family: var(--font-family);
-    background-color: var(--green-button-color);
-    border-radius: .4em;
-    font-size: 15px;
-    color: var(--white-button-color);
+    background-color: var(--dark-green-color);
+    font-family: var(--font-family-2);
+    transform: translateX(-50%);
+    color: var(--white-color);
     display: inline-block;
     text-decoration: none;
+    border-radius: .4em;
     padding: 12px 18px;
     margin-left: 50%;
-    transform: translateX(-50%);
-
+    font-size: 15px;  
 } 
-section.aanDeSlag a:hover:nth-of-type(1){
+
+section.aanDeSlag a:hover:nth-of-type(1) {
+    border:  1px solid var(--dark-green-color);
+    background-color: var(--white-color);
+    color: var(--dark-green-color);
     cursor: pointer;
-    background-color: var(--white-button-color);
-    color: var(--green-button-color) ;
-    }
+}
     
-    section.aanDeSlag a:focus:nth-of-type(1){
-    background-color: var(--white-button-color);
-    color: var(--green-button-color);
-    border:  1px solid var(--green-button-color);
-    }
+section.aanDeSlag a:focus:nth-of-type(1) {
+    border:  1px solid var(--dark-green-color);
+    background-color: var(--white-color);
+    color: var(--dark-green-color); 
+}
 
 section.aanDeSlag a:nth-of-type(2) {
-        font-family: var(--font-family);
-        background-color: var(--white-button-color);
-        border:  1px solid var(--green-button-color);
-        border-radius: .4em;
-        font-size: 15px;
-        color:rgb(42, 119, 42);
-        margin-top: .5em;
-        display: inline-block;
-        text-decoration: none;
-        text-align: center;
-        padding: 12px 18px;
-        margin-left: 50%;
-        transform: translateX(-50%);
-        width: 80%;
-        
-    }
+    border:  1px solid var(--dark-green-color);
+    background-color: var(--white-color);
+    font-family: var(--font-family-2);
+    color: var(--dark-green-color);
+    transform: translateX(-50%);
+    display: inline-block;
+    text-decoration: none;
+    border-radius: .4em;
+    text-align: center;
+    padding: 12px 18px;
+    margin-top: .5em;
+    margin-left: 50%;
+    font-size: 15px;
+    width: 80%;
+}
     
-    section.aanDeSlag a:hover:nth-of-type(2){
-        cursor: pointer;
-        background-color: var(--green-button-color) ;
-        color: var(--white-button-color) ;
-    }
+section.aanDeSlag a:hover:nth-of-type(2) {
+    background-color: var(--dark-green-color);
+    color: var(--white-color);
+    cursor: pointer;
+}   
     
-    section.aanDeSlag a:focus:nth-of-type(2){
-        background-color: var(--white-button-color);
-        color: var(--green-button-color);
-        border:  1px solid var(--green-button-color);
-    }
+section.aanDeSlag a:focus:nth-of-type(2) {
+    border:  1px solid var(--dark-green-color);
+    background-color: var(--white-color);
+    color: var(--dark-green-color); 
+}
 
-
-
-
-
-section.aanDeSlag hr{
+section.aanDeSlag hr {
+    border: .05em solid var(--hr-color);
     margin-top: 2em;
-    border: .05em solid rgb(199, 199, 199);
     width: 100%; 
 }  
 
 
-
+/************************/
 /* Footer */
-section.footer ul{
-    color: var(--h-color);
+/************************/
+
+section.footer ul {
+    color: var(--black-color);
     list-style: none;
     padding: 0;
     
 }
 
-section.footer li{
+section.footer li {
+    border-top: .05em solid var(--hr-color);
     line-height: 3em;
-    border-top: .05em solid rgb(199, 199, 199);
     width: 100%;
 }
 
-section.footer li:nth-of-type(4){
-    border-bottom: .05em solid rgb(199, 199, 199);
+section.footer li:nth-of-type(4) {
+    border-bottom: .05em solid var(--hr-color);
 }
 
-section.footer a{
+section.footer a {
+    color: var(--black-color);
     text-decoration: none;
-    color: var(--h-color);
-    margin-left: 2em;
-    
+    margin-left: 2em;   
 }
 
-section.footer li img{
+section.footer li img {
+    margin-top: .5em;
+    float: right;  
     height: 2em;
     width: auto;
-    float: right;
-    margin-top: .5em;  
-    
 }
 
-section.footer img{
-    height: 3em;
-    width: auto;
-    margin-left: 50%;
+section.footer img {
     transform: translateX(-50%);
+    margin-left: 50%;
+    height: 3em;
+    width: auto; 
 }
 
-section.links{
-    margin-left: 50%;
+
+/************************/
+/* Links */
+/************************/
+
+section.links {
+    
     transform: translateX(-50%);
     text-align: center;
-    width: 90%;
     font-size: .85em;
-    
+    margin-left: 50%;
+    width: 90%;  
 }
 
-section.links a{
-    color: black;
+section.links a {
+    color: var(--black-color);
 }
 
-section.links img{
+section.links img {
     height: 1em;
     width: auto;
 }
 
 
 
-/* 2e pagina */
 
 
-section.helpHoofdFoto img{
-    height: auto;
-    width: 100%;
-    margin-top: .5em;
+
+/************************/
+/* 2e Pagina */
+/************************/
+
+/************************/
+/* Help Hoofd Foto */
+/************************/
+
+section.helpHoofdFoto img {
     /* weten waarom 67 er staat!!  */
     box-shadow:0em -.15em .15em  #00000067;
     position: relative;
+    margin-top: .5em;
+    height: auto;
+    width: 100%; 
 }
 
-section.helpHoofdFoto h1{
-    position: absolute;
-    top: 20%;
-    left: 50%;
+section.helpHoofdFoto h1 {
+    font-family: var(--font-family-2);
     transform: translate(-50%);
+    justify-content: center;
+    position: absolute;
     font-size: 2em;
+    height: 1.5em;
+    display: flex;
     width: 50%;
-    height: 1.5em;
-    display: flex;
-    justify-content: center;
-    font-family: Agrandir,sans-serif;
-   
-
-}
-
-section.helpHoofdFoto p{
-    position: absolute;
-    top: 28%;
     left: 50%;
-    transform: translate(-50%);
-    font-size: 1em;
-    width: 80%;
-    height: 1.5em;
-    display: flex;
-    justify-content: center;
-    font-family: Agrandir,sans-serif;
-    
+    top: 20%;  
 }
 
-section.antwoord h2{
-    font-size: 1.2em;
-    margin: 2em;
-    font-family: Agrandir,sans-serif;
+section.helpHoofdFoto p {
+    font-family: var(--font-family-2);  
+    transform: translate(-50%);
+    justify-content: center;
+    position: absolute;
+    font-size: 1em;
+    height: 1.5em;
+    display: flex;
+    width: 80%;
+    left: 50%;
+    top: 28%;   
 }
-section.antwoord ul{
+
+
+/************************/
+/* Antwoord */
+/************************/
+
+section.antwoord {
+    background-color: var(--helpPagina-background-color);
+    padding-bottom: 2em;
+    padding-top: 2em;  
+}
+
+section.antwoord h2 { 
+    font-family: var(--font-family-1); 
+    padding-bottom: 2em;
+    font-weight: lighter;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+section.antwoord ul {
     list-style: none;
     padding-left: 0;
 }
 
-section.antwoord li{
-    color: black;
-    border: .1em solid var(--green-button-color);
+section.antwoord li {
+    border: .1em solid var(--dark-green-color);
     padding: .8em 1em .8em 1em;
+    color: var(--black-color);
     text-align: center;
-    margin: .85em;
-    
-}
-section.antwoord a{
-    text-decoration: none;
-    color: black;
+    margin: .85em;   
 }
 
-section.antwoord p{
+section.antwoord li:hover {
+    background-color: var(--hover-green-color);
+    border: .2em solid var(--dark-green-color);
+}
+
+section.antwoord a {
+    color: var(--black-color);
+    text-decoration: none;
+}
+
+section.antwoord p {
+    margin: 0;
+}
+
+hr {
+    color: var(--hr-color);
     margin: 0;
 }
 
 
+/************************/
+/* Zoeken */
+/************************/
+
+section.zoeken {
+    background-color: var(--helpPagina-background-color);
+    padding-bottom: 2em;
+    position: relative;
+    padding-top: 2em;
+}
+
+section.zoeken ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+section.zoeken li {
+    background-color: var(--helpPagina-background-color);
+    box-shadow: 0em 0em .7em  #00000044;
+    padding: 1.7em 1em 1.7em 1em;
+    color: var(--black-color);
+    text-align: center;
+    border-radius: 2%;
+    margin: .85em;
+}
+
+section.zoeken img {
+    height: 2.3em;
+    width: auto;
+}
+
+section.zoeken a {
+    color: var(--dark-green-color);
+    text-decoration: none;
+}
+
+section.zoeken p {
+    margin: 0;
+}
+
+section.zoeken input {
+    box-sizing: border-box;
+    font-size: 1em;
+    padding: .8em;
+    width: 100%;
+}
+
+section.zoeken form {
+    position: relative;
+    margin: 0 1em;  
+}
+
+section.zoeken form svg {
+    transform: translateY(-50%);
+    position: absolute;
+    right: 1.5em;
+    top: 50%;
+}
 
 
+/************************/
+/* Contact */
+/************************/
 
+section.contact { 
+    font-family: var(--font-family-2);
+    position: relative;
+}
 
+section.contact img:nth-of-type(1) {
+    /* A bepaalt in hoeverre de ondergrond door een afbeelding (of iets)
+    heen zal schijnen, hoe kleiner het getal hoe hoger de transparantie (pixel).*/
+    box-shadow:0em -.15em .15em  rgba(0, 0, 0, 0.404); 
+    margin-top: .5em;  
+    height: auto; 
+    width: 100%;
+}
 
+section.contact img:nth-of-type(2) {
+    position: relative;
+    margin-right: auto;
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-top: 1em;
+    display: block;  
+    height: 3.5em;  
+}
 
+section.contact p {
+    margin-bottom: 2em;
+    font-size: .8em;
+}
 
+section.contact img:nth-of-type(3) {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1em;
+    display: block;
+    height: 11em;
+    width: auto;
+}
 
+section.contact h2 {
+    transform: translate(-50%);
+    font-weight: lighter;
+    text-align: center;
+    position: absolute;
+    font-size: 1.5em;
+    height: 1.5em;
+    display: flex;
+    width: 90%;
+    left: 50%;
+    top: 12%; 
+}
 
+section.contact h3 {
+    font-weight: lighter;
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 0;
+}
+
+section.contact p {
+    color: var(--grey-color);
+    text-align: center;
+    margin-top: 0;
+    
+}
+
+section.contact a { 
+    background-color: var(--green-color);
+    font-family: var(--font-family-2);
+    transform: translate(-50%, -50%);
+    color: var(--white-color);
+    text-decoration: none;
+    border-radius: .4em;
+    position: absolute;
+    padding: 15px 15px; 
+    font-size: 1em;
+    left: 50%;
+    top: 30%; 
+} 
+
+section.contact a:hover {
+    background-color: var(--white-color);
+    color: var(--dark-green-color);
+    cursor: pointer;
+}
+
+section.contact a:focus {
+    border:  1px solid var(--dark-green-color);
+    background-color: var(--white-color);
+    color: var(--dark-green-color);
+}
 
 
 
